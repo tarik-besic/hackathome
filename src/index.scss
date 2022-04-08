@@ -1,0 +1,19 @@
+/* Colors Component */
+@import "./colors";
+
+/* Component Style */
+@import "./components/index";
+
+// Screens styling
+@import "./screens/index";
+
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+}
