@@ -3,7 +3,6 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 import Home from "./screens/Home";
 import Dashboard from "./screens/dashboard/index";
-import ActiveComp from "./components/ActiveComp";
 
 const App = () => {
     return (
