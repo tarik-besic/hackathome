@@ -14,6 +14,8 @@ export const NavbarData = [
         type:['Indirektno','Zagovaranje'],
         organizer:{
             name:"Carpe diem",
+            telephone:"060 32 06 605",
+            email:"oocarpediem14@outlook.com",
             description:"UDRUŽENJE OMLADINSKA ORGANIZACIJA 'ISKORISTI DAN - CARPE DIEM' je osnovana sa ciljem ostvarivanja zajedničkih i općih interesa kao i osnaživanja mladih",
             logo:img1,
             link:"https://www.facebook.com/omladinskaorganizacijacarpediem/"},
@@ -32,6 +34,8 @@ export const NavbarData = [
         type:['Direktno','Zagovaranje'],
         organizer:{
             name:"Carpe diem",
+            telephone:"060 32 06 605",
+            email:"oocarpediem14@outlook.com",
             description:"UDRUŽENJE OMLADINSKA ORGANIZACIJA 'ISKORISTI DAN - CARPE DIEM' je osnovana sa ciljem ostvarivanja zajedničkih i općih interesa kao i osnaživanja mladih",
             logo:img1,
             link:"https://www.facebook.com/omladinskaorganizacijacarpediem/"},
@@ -50,6 +54,8 @@ export const NavbarData = [
         type:['Direktno'],
         organizer:{
             name:"Civitas",
+            telephone:"033 261 415",
+            email:"civitas@outlook.com",
             description:"CIVITAS program u Bosni i Hercegovini dio je globalne mreže centara za građansko obrazovanje koju administrira Centar za građansko obrazovanje iz Kalabasasa, Kalifornija.",
             logo:img2,
             link:"https://civitas.ba/"},
@@ -69,6 +75,8 @@ export const NavbarData = [
         type:['Direktno','Zagovaranje'],
         organizer:{
             name:"ASuBiH",
+            telephone:"061 582 826",
+            email:"asubih@gmail.com",
             description:"Hercegovini (ASuBiH) je nevladina, nestranačka i nepolitička organizacija čiji je osnovni cilj poboljšanje statusa srednjoškolaca u zemlji",
             logo:img3,
             link:"https://asubih.ba/"},
