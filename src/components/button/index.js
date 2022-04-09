@@ -1,7 +1,7 @@
 import React from "react";
 
-const Button = () => {
-  return <button className="button">POPUNI FORMU I PRIJAVI SE</button>;
+const Button = (props) => {
+  return <button className="button">{props.input}</button>;
 };
 
 export default Button;

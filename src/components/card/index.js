@@ -13,7 +13,7 @@ function Cards(props) {
 
         <li>{props.third}</li>
       </ul>
-      <Button />
+      <Button input="POPUNI FORMU I PRIJAVI SE" />
     </div>
   );
 }
