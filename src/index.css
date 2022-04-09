@@ -109,6 +109,30 @@
   height: fit-content;
 }
 
+img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.active {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.unactive {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 a {
   text-decoration: none;
   color: white;
