@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Button = () => {
-  return (
-    <div>Button</div>
-  )
-}
+  return <button className="button">POPUNI FORMU I PRIJAVI SE</button>;
+};
 
 export default Button;
