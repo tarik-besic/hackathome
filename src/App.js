@@ -8,7 +8,6 @@ import ActiveComp from "./components/ActiveComp";
 const App = () => {
     return (
         <BrowserRouter>
-        <ActiveComp active={false} />
             <Routes>
                 <Route path="/home" element={<Home/>} />
                 <Route path="/" element={<Dashboard />} />
