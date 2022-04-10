@@ -1,0 +1,77 @@
+.project-info-wrapper{
+    background-color: #EAF3FA;
+    .project-info-container{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2vw;
+        img{
+            width: 450px;
+            height: 240px;
+            margin-bottom: 20px;
+        }
+        .project-header{
+            width: 60px;
+            height: fit-content;
+            margin-bottom: 20px;
+        }
+        .info-wrapper{
+            display: flex;
+            width: 700px;
+            .item{
+                width: fit-content;
+                height: fit-content;
+                margin: 5px 0;
+                font-size: 25px;
+                display: flex;
+            }
+            .first-half{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                .items{
+                    padding-right: 2em;
+                    display: flex;
+                    align-items: flex-end;
+                    flex-direction: column;
+                }
+            }
+            .second-half{
+                width: 50%;
+                border-left: 1px solid black;
+                display: flex;
+                flex-direction: column;
+                .items{
+                    padding-left: 2em;
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: column;
+                }   
+            }   
+        }
+    
+        .project-desc-wrapper{
+            margin-top: 54px;
+            border-radius: 20px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            width: 900px;
+            .project-desc{
+                display: flex;
+                align-items: center;
+            }
+    
+        }
+        .images-proj{
+            width: 30px;
+            height: 30px;
+            margin-bottom: 0;
+            margin-right: 10px;
+        }
+    }
+}

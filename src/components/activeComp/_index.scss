@@ -1,0 +1,9 @@
+.activeComp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    .text{
+        font-size: 24px;
+    }
+}
