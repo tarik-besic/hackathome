@@ -1,0 +1,56 @@
+.home-wrapper{
+    background-color: #E4F3FF;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .card-wrapper{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .input-wrapper{
+        display: flex;
+        flex-direction: column;
+        .top{
+            display: flex;
+            justify-content: space-between;
+            width: 500px;
+            input{
+                width: 200px;
+                padding: 6px 10px;
+                margin: 8px 0;
+                border-radius: 5px;
+                border: 1px solid grey;
+            }
+        }
+        .bot{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 500px;
+            .selekt{
+                padding: 10px;
+                border-radius: 5px;
+            }
+        }
+        .dugme{
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .button{
+                background-color: #365EE2;
+                padding: 10px 40px;
+                border-radius: 10px;
+                border: none;
+                cursor: pointer;
+                color: white;
+                font-size: 20px;
+            }
+
+        }
+        
+        
+    }
+}
