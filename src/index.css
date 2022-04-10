@@ -144,6 +144,8 @@
 
 .project-info-wrapper {
   background-color: #EAF3FA;
+  padding: 2vw;
+  overflow: hidden;
 }
 
 .project-info-wrapper .project-info-container {
@@ -159,7 +161,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2vw;
 }
 
 .project-info-wrapper .project-info-container img {
@@ -408,7 +409,6 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  height: 30px;
   border: none;
   cursor: pointer;
   border: 1px solid gray;
@@ -609,6 +609,79 @@
   padding-top: 200px;
   color: white;
   font-size: 45px;
+}
+
+.label {
+  width: 255px;
+  height: 20px;
+  margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.add-txt {
+  margin: 30px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.container h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.container .input-wrapper .left {
+  float: left;
+  margin-bottom: 5px;
+}
+
+.container .input-wrapper .left .input {
+  margin: 5px;
+  width: 200px;
+  height: 30px;
+}
+
+.info-input {
+  margin: 10px;
+  width: 660px;
+  height: 200px;
+}
+
+.upload {
+  width: 200px;
+  height: 40px;
+  margin: 20px 0px 0px 220px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.upload:hover {
+  background-color: #365EE2;
 }
 
 * {

@@ -1,12 +1,14 @@
 .project-info-wrapper{
     background-color: #EAF3FA;
+    padding:2vw;
+    overflow: hidden;
     .project-info-container{
         width: 100vw;
         height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 2vw;
+        // padding:- 2vw;
         img{
             width: 450px;
             height: 240px;

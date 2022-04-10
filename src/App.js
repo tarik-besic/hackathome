@@ -2,7 +2,9 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Dashboard from "./screens/dashboard/index";
 import Project from "./screens/project/project";
+import MakeProject from "./screens/makeProject/index";
 import imageHappy from "./assets/images/happy-image.png";
+
 
 const App = () => {
     return (
@@ -10,6 +12,7 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/project" element={<Project />} />
+                <Route path="/make-project" element={<MakeProject />} />
             </Routes>
         </BrowserRouter>
     );
