@@ -8,8 +8,16 @@ const App = () => {
     return (
         <BrowserRouter>
             <Routes>
-                {/* <Route path="/" element={<Dashboard />} /> */}
-                <Route path="/" element={<Project
+                <Route path="/" element={<Dashboard />} />
+                <Route path="/project" element={<Project />} />
+            </Routes>
+        </BrowserRouter>
+    );
+};
+
+export default App;
+
+/*<Project
                     name="Humanitarni bazar"
                     desProj="Humanitarni bazar za prikupljanje novca za Crveni Križ Ilijaš"
                     active={true}
@@ -29,10 +37,4 @@ const App = () => {
                     volNeeded="25"
                     image={imageHappy}
 
-                />} />
-            </Routes>
-        </BrowserRouter>
-    );
-};
-
-export default App;
+                />*/

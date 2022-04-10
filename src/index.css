@@ -1,30 +1,46 @@
 /* Component Style */
-.card {
+.Card {
+  width: 300px;
+  height: 420px;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 20px;
+  margin: 2em;
+}
+
+.Card .Header {
+  border-radius: 10px 10px 0 0;
+  padding-top: 10px;
+  width: 100%;
+  height: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 900px;
-  margin: 4em;
-  height: 250px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+  font-size: 15px;
+  background-color: #040480;
 }
 
-.card .left {
-  width: 50%;
-  height: 100%;
+.Card .Header img {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
 }
 
-.card .left img {
-  height: 100%;
-  width: 100%;
+.Card .Header .Type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.card .right {
-  padding-left: 32px;
-  width: 50%;
-  height: 100%;
+.Card .Header .Type .tip:first-child {
+  padding: 0 10px;
+}
+
+.Card .Body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,31 +48,49 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Card .Body .Title {
+  text-align: center;
+}
+
+.Card .Body img {
+  width: 300px;
+  height: 150px;
+}
+
+.Card .Body h1 {
+  font-size: 20px;
+}
+
+.Card .Body .Decs {
+  color: gray;
+  text-align: center;
+  min-width: 200px;
+  max-width: 200px;
+  min-height: 115px;
+  max-height: 115px;
+  overflow: hidden;
+}
+
+.Card .Footer {
+  color: gray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 25px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.card .right .header-text {
-  font-size: 26px;
-  font-weight: bold;
-  width: 100%;
-}
-
-.card .right .body-text {
-  color: #949494;
-  font-size: 18px;
-  font-weight: 100;
-}
-
-.card .right .more {
-  cursor: pointer;
-}
-
-.card .right .more a {
-  color: black;
-  font-size: 18px;
-  font-weight: bold;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header {
@@ -72,11 +106,10 @@
   position: absolute;
   border-radius: 0;
   z-index: 1;
-  width: 100%;
   height: 100%;
-  min-width: 100vw;
   max-height: 210px;
   min-height: 210px;
+  width: 100%;
 }
 
 .header .header-content {
@@ -115,7 +148,7 @@
 
 .project-info-wrapper .project-info-container {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -218,7 +251,7 @@
 .project-info-wrapper .project-info-container .project-desc-wrapper {
   margin-top: 54px;
   border-radius: 20px;
-  height: 500px;
+  margin-bottom: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -231,15 +264,14 @@
           align-items: center;
   background-color: white;
   width: 900px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .project-info-wrapper .project-info-container .project-desc-wrapper .project-desc {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  text-align: center;
+  padding: 40px;
 }
 
 .project-info-wrapper .project-info-container .images-proj {
@@ -247,6 +279,17 @@
   height: 30px;
   margin-bottom: 0;
   margin-right: 10px;
+}
+
+.project-info-wrapper .project-info-container button {
+  margin-top: 20px;
+  background-color: #365EE2;
+  padding: 10px 40px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
 }
 
 .activeComp {
@@ -266,6 +309,306 @@
 
 .activeComp .text {
   font-size: 24px;
+}
+
+.modal-wrapper {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  left: 0;
+  top: 0;
+}
+
+.modal-wrapper .modal {
+  height: 400px;
+  width: 450px;
+  margin: auto;
+  z-index: 10;
+  -webkit-box-shadow: 5px 5px 3px gray;
+          box-shadow: 5px 5px 3px gray;
+  background: white;
+  border-radius: 20px;
+  background: url("./assets/images/waves.svg");
+}
+
+.modal-wrapper .modal .modal-header {
+  width: 450px;
+  height: 40px;
+  background-color: #365EE2;
+  border-radius: 20px 20px 0px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal-wrapper .modal .modal-header .header-txt {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+.modal-wrapper .modal .center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  margin: 20px;
+}
+
+.modal-wrapper .modal .center label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.modal-wrapper .modal .center .input {
+  width: 300px;
+  height: 30px;
+  background-color: #D8D8D8;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin: 10px;
+}
+
+.modal-wrapper .modal .center .input ::-webkit-input-placeholder {
+  color: black;
+}
+
+.modal-wrapper .modal .center .input :-ms-input-placeholder {
+  color: black;
+}
+
+.modal-wrapper .modal .center .input ::-ms-input-placeholder {
+  color: black;
+}
+
+.modal-wrapper .modal .center .input ::placeholder {
+  color: black;
+}
+
+.modal-wrapper .modal .center .signup-button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  border: 1px solid gray;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #365EE2;
+  color: white;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.modal-wrapper .background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+  background: white;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+
+.home-wrapper {
+  background-color: #E4F3FF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.home-wrapper .card-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home-wrapper .input-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.home-wrapper .input-wrapper .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 500px;
+}
+
+.home-wrapper .input-wrapper .top input {
+  width: 200px;
+  padding: 6px 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.home-wrapper .input-wrapper .bot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 500px;
+}
+
+.home-wrapper .input-wrapper .bot .selekt {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.home-wrapper .input-wrapper .dugme {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home-wrapper .input-wrapper .dugme .button {
+  background-color: #365EE2;
+  padding: 10px 40px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+}
+
+.home-wrapper a {
+  text-decoration: none;
+  color: white;
+  padding-right: 30px;
+  padding-left: 30px;
+  border-right: solid white 2px;
+}
+
+.home-wrapper a:last-child {
+  border: none;
+}
+
+.home-wrapper .homeScreen {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7) url("./assets/images/volonter.svg");
+  background-size: cover;
+  background-blend-mode: darken;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.home-wrapper .homeScreen .Screen {
+  width: 100%;
+  height: 100vh;
+}
+
+.home-wrapper .homeScreen .Screen .top {
+  width: 100%;
+  font-size: 35px;
+  color: white;
+  font-weight: bolder;
+  padding-left: 60px;
+}
+
+.home-wrapper .homeScreen .Screen .top .link {
+  margin-top: 20px;
+  float: right;
+}
+
+.home-wrapper .homeScreen .Screen .top .logo {
+  float: left;
+  width: 300px;
+  height: 100px;
+}
+
+.home-wrapper .homeScreen .Screen .top .logo img {
+  float: left;
+  width: 300px;
+  height: 100px;
+}
+
+.home-wrapper .homeScreen .Screen .title {
+  margin: 0px;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home-wrapper .homeScreen .Screen .title h1 {
+  padding-top: 300px;
+  color: white;
+  margin: 0px;
+  font-size: 60px;
+}
+
+.home-wrapper .homeScreen .Screen .text {
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0px;
+  width: 900px;
+  margin: auto;
+}
+
+.home-wrapper .homeScreen .Screen .text h2 {
+  padding-top: 200px;
+  color: white;
+  font-size: 45px;
 }
 
 * {

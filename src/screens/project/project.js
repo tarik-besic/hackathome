@@ -1,6 +1,9 @@
 import React from 'react'
 import ProjectInfo from '../../components/projectInfo';
-const Project = (props) => {
+import {useLocation} from 'react-router-dom';
+const Project = () => {
+    const location=useLocation();
+    const props=location.state;
     return (
         <div className='project-wrapper'>
 
@@ -15,6 +18,7 @@ const Project = (props) => {
                 type={props?.type}
                 location={props?.location}
                 desProj={props?.desProj}
+                active={props?.active}
             />
             
         </div>

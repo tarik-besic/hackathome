@@ -8,7 +8,7 @@ const ActiveComp = (props) => {
         <div className='activeComp'>
             {props.active ? (
                 <>
-                    <img src={activeLogo} style={{ width: "20px", height: "20px", paddingRight:"12px" }} />
+                    <img src={activeLogo} style={{ width: "40px", height: "30px", paddingRight:"12px",marginBottom:0}} />
                     <div className='text'>{props?.active ? "Aktivan" : "Zavrsen"}</div>
                 </>
             ) : (

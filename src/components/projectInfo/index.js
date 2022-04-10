@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from "react";
 import ActiveComp from '../activeComp/index'
 import ActiveImg from "../../assets/images/active.png"
 import date from "../../assets/images/calendar.png"
@@ -11,34 +11,32 @@ import location from "../../assets/images/location.png"
 import clock from "../../assets/images/clock.png"
 import time from "../../assets/images/time.png"
 import volounteer from "../../assets/images/volunteer.png"
-
-
-
-
-
+import Modal from "../../components/modal";
+import LightBox from "../../components/LightBox/index";
 
 const ProjectInfo = (props) => {
+  const [modalShow, setModalShow] = useState({ test: false });
   return (
     <div className='project-info-wrapper'>
       <div className='project-info-container'>
-        <img src={props.image} />
-        <h1>Projekat: {props.name}</h1>
+        <img src={props?.image} />
+        <h1>Projekat: {props?.name}</h1>
         <div className="info-wrapper">
           <div className="first-half">
             <div className='items'>
-              <ActiveComp active={props.active} />
+              <ActiveComp active={props?.active} />
 
               <div className="item">
                 <img src={Blue} className="images-proj" />
-                {props.organizer.name}
+                {props?.organizer.name}
               </div>
               <div className="item">
                 <img src={phone} className="images-proj" />
-                {props.organizer.telephone}
+                {props?.organizer.telephone}
               </div>
               <div className="item">
                 <img src={email} className="images-proj" />
-                {props.organizer.email}
+                {props?.organizer.email}
               </div>
               <div className='item'>
                 Social Media:
@@ -82,6 +80,20 @@ const ProjectInfo = (props) => {
             {props?.desProj}
           </div>
         </div>
+        {props.active ? <button
+        onClick={() => {
+          setModalShow({ ...modalShow, test: true });
+        }}
+      >
+        Prijavi se
+      </button> : <LightBox /> }
+        
+        {modalShow.test && (
+        <Modal
+          close={() => setModalShow({ ...modalShow, test: false })}
+          className="testing nema nista"
+        />
+      )}
       </div>
     </div>
   )

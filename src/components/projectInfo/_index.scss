@@ -2,7 +2,7 @@
     background-color: #EAF3FA;
     .project-info-container{
         width: 100vw;
-        height: 100vh;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -55,15 +55,16 @@
         .project-desc-wrapper{
             margin-top: 54px;
             border-radius: 20px;
-            height: 500px;
+            margin-bottom: 24px;
             display: flex;
             flex-direction: column;
             align-items: center;
             background-color: white;
             width: 900px;
+            height: fit-content;
             .project-desc{
-                display: flex;
-                align-items: center;
+                text-align: center;
+                padding: 40px;
             }
     
         }
@@ -72,6 +73,16 @@
             height: 30px;
             margin-bottom: 0;
             margin-right: 10px;
+        }
+        button{
+            margin-top: 20px;
+            background-color: #365EE2;
+            padding: 10px 40px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-size: 20px;
         }
     }
 }

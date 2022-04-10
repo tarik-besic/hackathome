@@ -3,21 +3,69 @@ import HeaderImage from '../../components/headerImg';
 import first from '../../assets/images/first.png';
 import imageHappy from "../../assets/images/happy-image.png";
 import projectImage from "../../assets/images/projectImage.png";
-import Card from '../../components/card';
-
+import CardComp from "../../components/card/index";
+import Home from "../home/index"
+import { data } from '../../assets/data/data';
+import { useNavigate } from 'react-router';
 
 const Dashboard = () => {
+  let navigate = useNavigate();
   return (
-    <div>
-      <HeaderImage img={first} text={"PROJEKTI KOJE SU REALIZOVALE SREDNJE ŠKOLE"}/>
-      <Card img={imageHappy} description={{
-        header_text:`Projekat: Ljepši park - Sretnije dijete`,
-        body_text:`Učenici srednjoškolskog centra "Nedžad Ibrišimović" Ilijaš uspješno su realizovali projekat “Ljepši park - Sretnije dijete”. Veliki odaziv srednjoškolaca učinio je da se ovaj projekat... `
-      }} />
-      <Card img={projectImage} description={{
-        header_text:`Projekat: Kako imati bolju prezentaciju?`,
-        body_text:`Učenici srednjoškolskog centra "Nedžad Ibrišimović" Ilijaš uspješno su realizovali projekat “Kako imati bolju prezentaciju?”, gdje su gimnazijalci IT smjera dali mnoge savijete...`
-      }} />
+    <div className='main-screen'>
+      <div className='home-wrapper'>
+        <Home />
+        <HeaderImage img={first} text={"PROJEKTI"} />
+        <div className='input-wrapper'>
+          <div className='top'>
+            <input type="text" name='name' placeholder='Naziv projekta' />
+            <input type="text" name='trajanje' placeholder='Broj sati' />
+          </div>
+          <div className='bot'>
+            <span>
+              <select name="" id="" className='selekt'>
+                <option value="" disabled selected>Vrsta DKU-a:</option>
+                <option value="">Direktni</option>
+                <option value="">Indirektni</option>
+                <option value="">Istrazivanje</option>
+                <option value="">Zagovaranje</option>
+              </select>
+            </span>
+            <span>
+              <select id="" className='selekt'>
+                <option value="" disabled selected>Stanje</option>
+                <option value="">Aktivni</option>
+                <option value="">Zavrseni</option>
+              </select>
+            </span>
+          </div>
+          <div className='dugme'>
+            <button className='button'>Traži</button>
+          </div>
+        </div>
+        <div className='kartice'>
+
+        </div>
+        <div className='card-wrapper'>
+          {data.map((card) => {
+            return <CardComp
+              type={card.type}
+              name={card.name}
+              active={card.active}
+              desProj={card.desProj}
+              date={card.date}
+              time={card.time} img={card.image} 
+              onClick={()=>{
+                // console.log("tare")
+                navigate("/project",{state:card})
+              }}
+              />
+
+          })}
+        </div>
+
+
+      </div>
+
     </div>
   )
 }
