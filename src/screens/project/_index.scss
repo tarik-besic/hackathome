@@ -1,0 +1,66 @@
+   .label
+  {
+        width: 255px;
+        height: 20px;
+        margin-top: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+  }
+   .add-txt
+    {
+        margin: 30px 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    } .row
+    {
+        display: flex;
+    }
+
+  .container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    h2
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+    .input-wrapper
+    {
+        .left 
+        {
+            float: left;
+            margin-bottom: 5px;
+   
+    .input
+    {
+        margin: 5px;
+        width: 200px;
+        height: 30px;
+    }}}
+    
+   
+    
+} .info-input
+    {
+        margin: 10px;
+        width: 660px;
+        height: 200px;
+    }
+          .upload
+    {
+        width: 200px;
+        height: 40px;
+        margin: 20px 0px 0px 220px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color:white;
+        border-radius: 5px;
+        cursor: pointer;    
+    }
+    .upload:hover
+    {
+        background-color: #365EE2;
+    }
